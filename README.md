@@ -12,7 +12,7 @@ An agent skill for a learning loop. The agent builds knowledge units from source
 
 ## Install
 
-Copy the `learning-loop/` folder into your agent's skills directory (for example `.claude/skills/`, `.agents/skills/` or `.omp/skills/`). Node.js 18 or newer runs the script. It has no dependencies. Adjust the script path in `SKILL.md` to where you put the folder.
+Copy the `learning-loop/` folder into your agent's skills directory (for example `.claude/skills/`, `.agents/skills/` or `.omp/skills/`). The script uses only built-in Node.js modules (`node:util` `parseArgs` needs Node 18.3 or newer). It was tested on Node 24 only. Adjust the script path in `SKILL.md` to where you put the folder.
 
 ## Usage
 
@@ -56,7 +56,7 @@ node --test
 - A no-notes answer tests reasoning without hints. It does not show that a model's memory changed.
 - The script schedules. The agent grades. A wrong grade gives a wrong schedule.
 - The script has no lock. Run one writer at a time.
-- Retrieval practice needs a way to start a fresh session with no files, skills or tools. If your harness cannot do that, the skill cannot test without notes. The skill has not been run on every harness. I tested only the script.
+- Retrieval practice needs a way to start a fresh session with no files, skills or tools. If your harness cannot do that, the skill cannot test without notes. Only the script is tested. The skill's practice routine has not been run on any harness.
 - Old model names, versions and prices in your notes are not current facts.
 
 ## Files

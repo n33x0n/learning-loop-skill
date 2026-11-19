@@ -57,10 +57,10 @@ Time-box it. Use at most 10 minutes for the new unit and up to two other overdue
 Prepare 2-3 questions about new uses, limits and spotting errors. Then write the first answers without notes:
 
 - Use a fresh session that has no memory files, no skills and no tools. Your current session already holds the answers in context, so it cannot test you.
-- Give that session only the questions and the answer format. Collect its answer yourself.
-- Give the scenario the data it needs. A missing private name in an empty context is not a knowledge error.
-- Ask the session to describe the idea in general terms. Allow ONE concrete example command only if the answer can verify it. Otherwise it describes the idea without a command.
-- Reading an instruction that contains hints voids the "no notes" claim. Record such a try as a source-assisted answer, not as a retrieval.
+- Give that session only the questions and the answer format. It gets no tools at all, not even write. The answer comes back on stdout and you save it. Keep the raw output. Afterwards check the real model it used, that it made zero tool calls, and that no project context was attached.
+- Give the scenario the data and the tool catalog it needs for the decision. A missing private name in an empty context is not a knowledge error.
+- When a question asks for a status or label, list the allowed values from the contract. Grade the decision, not a guess at a private label. Check separately that the session finds the right procedure from the sources.
+- Reading an instruction that contains hints voids the "no notes" claim. Do not delete such a result and do not count it as a pass. Fix the isolation and use a separate file for the next try.
 - Keep the first answer unedited. Do not correct it afterwards.
 
 Then read the sources and grade each first answer: decision, reason, the key limit and how to check it.
