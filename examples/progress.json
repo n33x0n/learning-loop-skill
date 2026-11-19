@@ -1,0 +1,28 @@
+{
+  "units": {
+    "http-caching": {
+      "file": "knowledge/http-caching.md",
+      "level": 2,
+      "lastReview": "2025-03-01",
+      "nextReview": "2025-03-08",
+      "lastResult": "pass",
+      "evidence": "knowledge/reviews/2025-03-01.md"
+    },
+    "sql-indexes": {
+      "file": "knowledge/sql-indexes.md",
+      "level": 0,
+      "lastReview": null,
+      "nextReview": "2025-03-05",
+      "lastResult": null,
+      "evidence": null
+    },
+    "retry-backoff": {
+      "file": "knowledge/retry-backoff.md",
+      "level": 4,
+      "lastReview": "2025-02-10",
+      "nextReview": "2099-01-01",
+      "lastResult": "pass",
+      "evidence": "knowledge/reviews/2025-02-10.md"
+    }
+  }
+}
