@@ -30,10 +30,13 @@ Use `--on` to pin the date:
 node learning-loop/scripts/review.mjs due --state examples/progress.json --on 2025-03-08
 ```
 
-Record a graded result. Evidence is a report file that exists:
+Record a graded result using a temporary copy of the example state and a report file:
 
 ```sh
-node learning-loop/scripts/review.mjs record sql-indexes pass --evidence knowledge/reviews/2025-03-05.md --on 2025-03-05
+demo=$(mktemp -d)
+cp examples/progress.json "$demo/progress.json"
+printf 'Example review evidence\n' > "$demo/review.md"
+node learning-loop/scripts/review.mjs record sql-indexes pass --state "$demo/progress.json" --evidence "$demo/review.md" --on 2025-03-05
 ```
 
 This moved `sql-indexes` to level 1 with the next review on 2025-03-06.
